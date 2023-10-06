@@ -1,0 +1,246 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark theme */
+body {
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    background: url('header-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Style the logo */
+.logo {
+    width: 60px; /* Adjust the width as needed */
+    height: 60px; /* Set the height equal to the width for a circular shape */
+    border-radius: 50%; /* Make the logo circular */
+    background-color: rgba(17, 17, 17, 0.9); /* Background color similar to page */
+    padding: 10px; /* Add padding for spacing */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+/* Style the navigation menu toggle (hamburger menu) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: background-color 0.3s;
+}
+
+/* Style the navigation menu */
+nav {
+    background-color: rgba(17, 17, 17, 0.9);
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Style the navigation menu lists */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+/* Style the navigation menu items */
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff9900;
+}
+
+/* Style the content section with vertical alignment */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Style the individual info boxes without background boxes */
+.info-box {
+    background: none;
+    border: none;
+    text-align: center;
+    margin: 20px 0;
+    width: 80%;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Animation for the info boxes */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to each info box */
+.info-box:nth-child(1) {
+    animation-name: slideIn;
+    animation-delay: 0.5s;
+}
+
+.info-box:nth-child(2) {
+    animation-name: slideIn;
+    animation-delay: 1s;
+}
+
+.info-box:nth-child(3) {
+    animation-name: slideIn;
+    animation-delay: 1.5s;
+}
+
+/* Style the paragraph text */
+.info-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 10px;
+    border: 1px solid #ff9900;
+    border-radius: 5px;
+    background-color: rgba(255, 153, 0, 0.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ccc;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Add a hover effect for the paragraphs */
+.info-box p:hover {
+    background-color: rgba(255, 153, 0, 0.4);
+    color: white;
+}
+
+/* Style the contact comment box */
+.comment-box {
+    margin-top: 20px;
+    background-color: rgba(17, 17, 17, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 153, 0, 0.2);
+    color: #ccc;
+}
+
+.comment-box button {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-box button:hover {
+    background-color: #ff6600;
+}
+
+
+/* Style the header */
+header {
+    background: url('header-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Style the logo */
+.logo {
+    width: 60px; /* Adjust the width as needed */
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Style the navigation menu toggle (hamburger menu) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: background-color 0.3s;
+}
+
+/* Style the h1 element for animation */
+header h1 {
+    opacity: 0;
+    animation: fadeInDown 1s ease-in-out forwards 0.5s;
+}
+
+/* Animation for the header and h1 */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
